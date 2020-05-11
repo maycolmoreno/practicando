@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>{% block titulo %}
+    Título de la WEB {% endblock %}</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Título de la WEB">
+    <meta name="description" content="Descripción de la WEB">    
+    <link href="http://dominio.com/hoja-de-estilos.css" rel="stylesheet" type="text/css"/>    
+  </head>    
+  <body>    
+  {% block cuerpo %}
+    <header>
+    {% comment %} {% if persona %} {% endcomment %}
+      <h1>Primera tabla </h1>   
+<table border=2>
+<thead>
+  <tr>
+    <td>Apellido</td>
+    <td>Nombre</td>
+    <td>Correo</td>
+    <td> Opcion</td>
+    <td> Estado</td>
+
+</tr>
+</thead>
+<tbody>
+{% for persona in object_list %}
+  <tr>
+    <td>{{ persona.nombre }}</td>
+    <td>{{ persona.apellido }}</td>
+    <td>{{ persona.email }}</td>
+    <td><a href="{% url 'editarPersona' persona.id %}">Editar <a href="{% url 'eliminarPersona' persona.id %}">Eliminar </td>
+    <td>{{ persona.estado }}</td>
+
+  </tr>
+   {% endfor %}
+</tbody>
+</table> 
+{% comment %} {% endif %} {% endcomment %}
+    </header>    
+    <nav>
+    <a href="{% url 'autor' %}">Autor
+</nav>
+    <section> 
+    <a href="{% url 'crear_persona' %}">Crear     
+      <article>
+        
+        <div>
+          
+        </div>
+      </article>      
+    </section>
+    <aside>
+      
+      </a>
+      
+    </aside>
+    <footer>
+      
+    </footer>
+  {% endblock cuerpo %}
+  </body>  
+  
+</html>
+
+
+

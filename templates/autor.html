@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>{% block titulo %}
+    Título de la WEB {% endblock %}</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Título de la WEB">
+    <meta name="description" content="Descripción de la WEB">    
+    <link href="http://dominio.com/hoja-de-estilos.css" rel="stylesheet" type="text/css"/>    
+  </head>    
+  <body>    
+  {% block cuerpo %}
+    <header>
+<h2> Segunda tabla </h2>
+<table border=4>
+<thead>
+  <tr>
+    <td>Nombre</td>
+    <td>Apellido</td>
+    <td>Nacionalidad</td>
+    <td>Descripcion</td>
+    <td>Fecha de Creacion</td>
+</tr>
+</thead>
+<tbody>
+{% for autor in object_list %}
+  <tr>
+    <td>{{ autor.nacionalidad }}</td>
+    <td>{{ autor.apellido }}</td>
+    <td>{{ autor.nacionalidad }}</td>
+    <td>{{ autor.descripcion }}</td>
+    <td>{{ autor.fecha_creacion }}</td>   
+  </tr>
+   {% endfor %}
+</tbody>
+</table> 
+
+
+    </header>    
+    <nav>
+     
+    </nav>
+    <section> 
+    <a href="{% url 'index' %}">atras     
+      <article>
+        
+        <div>
+          
+        </div>
+      </article>      
+    </section>
+    <aside>
+      
+      </a>
+      
+    </aside>
+    <footer>
+      
+    </footer>
+  {% endblock cuerpo %}
+  </body>  
+  
+</html>
+
+
+
