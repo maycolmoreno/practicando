@@ -17,18 +17,18 @@
   <tr>
     <td>Nombre</td>
     <td>Apellido</td>
-    <td>Nacionalidad</td>
-    <td>Descripcion</td>
+    <td>Correo</td>
+    <td>Redes Sociales</td>
     <td>Fecha de Creacion</td>
 </tr>
 </thead>
 <tbody>
 {% for autor in object_list %}
   <tr>
-    <td>{{ autor.nacionalidad }}</td>
+    <td>{{ autor.nombre }}</td>
     <td>{{ autor.apellido }}</td>
-    <td>{{ autor.nacionalidad }}</td>
-    <td>{{ autor.descripcion }}</td>
+    <td>{{ autor.correo }}</td>
+    <td>{{ autor.facebook }}</td>
     <td>{{ autor.fecha_creacion }}</td>   
   </tr>
    {% endfor %}

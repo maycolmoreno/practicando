@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'ServidigitalRiv.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'servidigital',
-        'USER': 'postgres',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pruebas',
+        'USER': 'root',
         'PASSWORD': '.r4e3w2q1',
         'HOST': 'localhost',
-        'PORT': 5432,
+        'PORT': 3306,  #5432
     }
 }
 
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-ec'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Lima'
 
 USE_I18N = True
 
@@ -127,3 +127,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+#CKEDITOR_UPLOAD_PATH = "/home/media/media.lawrence.com/uploads"

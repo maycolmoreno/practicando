@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=C:\Users\SERVIDIGITAL\Proyectos\envw"
+set "VIRTUAL_ENV=C:\Users\mayco\Documents\Proyectos\practicando\envw"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

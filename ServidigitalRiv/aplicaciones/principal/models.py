@@ -66,7 +66,7 @@ class Post(models.Model):
     titulo= models.CharField('Título', max_length=100, null = False, blank = False)
     slug= models.CharField('Slug', max_length=100, null = False, blank = False)
     descripcion= models.CharField('Descripción', max_length=255, null = False, blank = False)
-    #contenido = models.RichTextField('Contenido')
+    contenido = RichTextField('Contenido')
     imagen = models.URLField(max_length = 255, blank= False, null= False)
     autor = models.ForeignKey(Autor, on_delete= models.CASCADE)
     categoria= models.ForeignKey(Categoria, on_delete=models.CASCADE)
@@ -80,8 +80,3 @@ class Post(models.Model):
         def __str__(self):
                 return self.titulo
     
-    
-
-
-
-

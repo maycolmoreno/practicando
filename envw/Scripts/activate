@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='C:\Users\SERVIDIGITAL\Proyectos\envw'
+VIRTUAL_ENV='C:\Users\mayco\Documents\Proyectos\practicando\envw'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
