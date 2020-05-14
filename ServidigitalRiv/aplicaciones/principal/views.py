@@ -2,13 +2,31 @@ from django.shortcuts import render, redirect
 from .models import *
 from .forms import PersonaForm, AutorForm
 
-# def autor(request):
+def home(request):
+    return render(request,'index.html')
 #     autor= Autor.objects.all()
 #     contexto = {
 #         'autor':autor
 #     }
-#     return render(request,'index.html', contexto)
+#     return render(request,'index.html')
 
+def acerca(request):
+    return render(request,'about.html')
+
+def contacto(request):
+    return render(request,'contact.html')
+
+def login(request):
+    return render(request,'login.html')
+
+def menu(request):
+    return render(request,'menu.html')
+
+def register(request):
+    return render(request,'register.html')
+
+def single(request):
+    return render(request,'single.html')
 # def crearAutor(request):
 #     if request.method=='POST':
 #         form= AutorForm(request.POST)
