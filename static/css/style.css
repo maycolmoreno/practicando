@@ -551,7 +551,7 @@ a.button-w3ls:hover {
 }
 
 /* //left side text */
-/* right side slider */
+/* right side slider*/
 .banner-top1,
 .banner-top2,
 .banner-top3 {
@@ -559,7 +559,6 @@ a.button-w3ls:hover {
 }
 
 .banner-top1 {
-    background: url(../images/1.jpg) no-repeat bottom;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -568,7 +567,6 @@ a.button-w3ls:hover {
 }
 
 .banner-top2 {
-    background: url(../images/2.jpg) no-repeat bottom;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -577,7 +575,6 @@ a.button-w3ls:hover {
 }
 
 .banner-top3 {
-    background: url(../images/3.jpg) no-repeat bottom;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;

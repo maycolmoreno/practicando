@@ -1,0 +1,49 @@
+	<!-- header 2 -->
+	<!-- navigation -->
+	<div class="main-top py-1">
+		<div class="container">
+			<div class="nav-content">
+				<!-- logo -->
+				<h1>
+					<a id="logo" class="logo" href="index.html">
+						<img src="images/logo.png" alt="" class="img-fluid"><span>Tasty</span> Burger
+					</a>
+				</h1>
+				<!-- //logo -->
+				<!-- nav -->
+				{% block nav%}
+				<div class="nav_web-dealingsls">
+					<nav>
+						<label for="drop" class="toggle">Menu</label>
+						<input type="checkbox" id="drop" />
+						<ul class="menu">
+							<li><a href="/">Inicio</a></li>
+							<li><a href="{% url 'aplicaciones:acerca' %}">Acerca</a></li>
+							<li>
+								<!-- First Tier Drop Down -->
+								<label for="drop-3" class="toggle toogle-2">Paginas <span class="fa fa-angle-down"
+										aria-hidden="true"></span>
+								</label>
+								<a href="#pages">Pages <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+								<input type="checkbox" id="drop-3" />
+								<ul>
+									<li><a class="drop-text" href="{% url 'aplicaciones:crear_persona' %}">Servicios</a></li>
+									<li><a class="drop-text" href="{% url 'aplicaciones:acerca' %}">Our Chefs</a></li>
+									<li><a class="drop-text" href="{% url 'aplicaciones:menu' %}">Menu</a></li>
+									<li><a class="drop-text" href="{% url 'aplicaciones:single' %}">Single Page</a></li>
+									<li><a class="drop-text" href="{% url 'aplicaciones:login' %}">Login</a></li>
+									<li><a class="drop-text" href="{% url 'aplicaciones:register' %}">Registro</a></li>
+								</ul>
+							</li>
+							<li><a href="{% url 'aplicaciones:menu' %}">Menu</a></li>
+							<li><a href="{% url 'aplicaciones:contacto' %}">Contacto</a></li>
+						</ul>
+					</nav>
+				</div>
+				{% endblock nav%}
+				<!-- //nav -->
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+	<!-- //header 2 -->
