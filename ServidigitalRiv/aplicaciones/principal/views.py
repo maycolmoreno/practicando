@@ -3,15 +3,13 @@ from .models import *
 from .forms import PersonaForm, AutorForm
 
 def home(request):
-    return render(request,'index.html')
-#     autor= Autor.objects.all()
-#     contexto = {
-#         'autor':autor
-#     }
-#     return render(request,'index.html')
-
+    posts = Post.objects.filter(estado = True)
+    return render(request,'index.html',{'posts':posts})
+    
 def acerca(request):
-    return render(request,'about.html')
+    posts = Post.objects.filter(estado = True,
+    categoria = Categoria.objects.get(nombre = 'Menu'))
+    return render(request,'about.html',{'posts':posts})
 
 def contacto(request):
     return render(request,'contact.html')
