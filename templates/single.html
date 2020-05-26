@@ -10,14 +10,16 @@
 
 {% include 'nav.html'%}
 
-{% block acerca%}
+{% block especial2%}
 	<!-- single page -->
 	<div class="single-page py-5">
 		<div class="container py-xl-5 py-lg-3">
 			<div class="title-section text-center mb-md-5 mb-4">
 				<p class="w3ls-title-sub">Info</p>
-				<h3 class="w3ls-title">Single <span>Page</span></h3>
+				<h3 class="w3ls-title">{{posts.titulo}} <span>Page</span></h3>
 			</div>
+			{% comment %} {% if posts%} {% endcomment %}
+				{% for posts in posts%}
 			<div class="inner-sec">
 				<div class="row">
 					<!-- left side -->
@@ -272,10 +274,12 @@
 					<!-- //right side -->
 				</div>
 			</div>
+			{% endfor %}
+			{% comment %} {% endif %} {% endcomment %}
 		</div>
 	</div>
 	<!-- //single -->
-{% endblock acerca%}
+{% endblock especial2%}
 	<!-- footer -->
 	<footer class="py-5">
 		<div class="container py-xl-4">
@@ -284,7 +288,7 @@
 					<!-- logo -->
 					<h2>
 						<a class="logo text-wh" href="index.html">
-							<img src="images/logo.png" alt="" class="img-fluid"><span>Tasty</span> Burger
+							<img src="images/logo.png" alt="" class="img-fluid"><span>Ro</span> Burger
 						</a>
 					</h2>
 					<!-- //logo -->
@@ -378,18 +382,6 @@
 		</div>
 	</footer>
 	<!-- //footer -->
-	<!-- copyright -->
-	<div class="cpy-right text-center py-3">
-		<p>© 2019 Tasty Burger. All rights reserved | Design by
-			<a href="http://w3layouts.com"> W3layouts.</a>
-		</p>
-	</div>
-	<!-- //copyright -->
-	<!-- move top icon -->
-	<a href="#home" class="move-top text-center">
-		<span class="fa fa-level-up" aria-hidden="true"></span>
-	</a>
-	<!-- //move top icon -->
 
 </body>
 

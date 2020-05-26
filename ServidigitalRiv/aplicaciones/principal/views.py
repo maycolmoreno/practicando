@@ -24,7 +24,10 @@ def register(request):
     return render(request,'register.html')
 
 def single(request):
-    return render(request,'single.html')
+    posts = Post.objects.filter(estado = True,
+    categoria = Categoria.objects.get(nombre = 'Single'))
+    return render(request,'single.html',{'posts':posts})
+    
 # def crearAutor(request):
 #     if request.method=='POST':
 #         form= AutorForm(request.POST)
